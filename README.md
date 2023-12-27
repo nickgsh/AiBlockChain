@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # AiBlockChain
 AiBlockchain
 =======
@@ -88,3 +89,6 @@ Translations are periodically pulled from Transifex and merged into the git repo
 **Important**: We do not accept translation changes as GitHub pull requests because the next
 pull from Transifex would automatically overwrite them again.
 >>>>>>> master
+=======
+
+>>>>>>> 974abdb598144da92f7a4dd70bdac0900007a1b8
