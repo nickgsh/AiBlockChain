@@ -6,9 +6,8 @@ AiBlockchain
 Aiblockchain Core integration/staging tree
 =====================================
 
-[![Build Status](https://travis-ci.org/aiblockchain-project/aiblockchain.svg?branch=master)](https://travis-ci.org/aiblockchain-project/aiblockchain)
 
-https://aiblockchain.org
+
 
 What is Aiblockchain?
 ----------------
@@ -20,7 +19,7 @@ out collectively by the network. Aiblockchain Core is the name of open source
 software which enables the use of this currency.
 
 For more information, as well as an immediately useable, binary version of
-the Aiblockchain Core software, see [https://aiblockchain.org](https://aiblockchain.org).
+the Aiblockchain Core software.
 
 License
 -------
