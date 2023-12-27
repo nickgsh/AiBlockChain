@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 # AiBlockChain
 =======
 Aiblockchain Core integration/staging tree
