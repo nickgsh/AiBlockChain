@@ -1,12 +1,12 @@
-Litecoin Core version 0.21.2.2 is now available from:
+Aiblockchain Core version 0.21.2.2 is now available from:
 
- <https://download.litecoin.org/litecoin-0.21.2.2/>.
+ <https://download.aiblockchain.org/aiblockchain-0.21.2.2/>.
 
 This is a new patch version release that includes important security updates.
 
 Please report bugs using the issue tracker at GitHub:
 
-  <https://github.com/litecoin-project/litecoin/issues>
+  <https://github.com/aiblockchain-project/aiblockchain/issues>
 
 Notable changes
 ===============
