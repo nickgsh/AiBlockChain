@@ -3,10 +3,6 @@
 Aiblockchain Core integration/staging tree
 =====================================
 
-## Explorer
-Explore AiBlockChain transactions and blocks on our [Explorer](http://95.111.231.8:3001/).
-
-...
 
 
 What is Aiblockchain?
