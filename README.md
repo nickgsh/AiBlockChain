@@ -1,4 +1,5 @@
 # AiBlockChain
+[![Downloads](https://img.shields.io/github/downloads/nickgsh/AiBlockChain/total)](https://github.com/nickghs/AiBlockChain)
 Aiblockchain Core integration/staging tree
 =====================================
 
