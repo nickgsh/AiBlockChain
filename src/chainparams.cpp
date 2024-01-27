@@ -78,7 +78,7 @@ public:
         consensus.MinBIP9WarningHeight = 83; // segwit activation height + miner confirmation window
         
 consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-        consensus.nPowTargetTimespan = 60; // 1260 seconds (21 minutes)
+        consensus.nPowTargetTimespan = 60; // 60 seconds (1 minutes)
         consensus.nPowTargetSpacing = 0.5 * 60; // 60 seconds (1 minute)
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -91,13 +91,13 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 
         /// Deployment of Taproot (BIPs 340-342)
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].bit = 2;
-        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 80; // End November
+        consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 80; // End of month
   consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 87; //  days later
 
          ///Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004)
         consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 83; // End Feb 2022
-        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 120; // 364 days later
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 83; // End 2023
+        consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 120; //  days later
 
  consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000000000000000000005263");
     consensus.defaultAssumeValid = uint256S("0x691f1f7dce2faed527fa3ea36401858771ba44335b4854fc5b21754102db4b04"); // 0
@@ -130,7 +130,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         ///vSeeds.emplace_back("95.111.231.8");
         ///vSeeds.emplace_back("dnsseed.aiblockchaintools.com");
         ///vSeeds.emplace_back("dnsseed.aiblockchainpool.org");
-        ///vSeeds.emplace_back("dnsseed.koin-project.com");
+        ///vSeeds.emplace_back("dnsseed.aibc-project.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);
@@ -218,13 +218,13 @@ public:
 
         // Deployment of Taproot (BIPs 340-342)
         //consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].bit = 2;
-        //consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 2225664; // March 2022
-        //consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 2435328; // 364 days later
+        //consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nStartHeight = 2225664; // March 2024
+        //consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].nTimeoutHeight = 2435328; // days later
 
         // Deployment of MWEB (LIP-0002, LIP-0003, and LIP-0004)
         //consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].bit = 4;
-        //consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 2209536; // Jan/Feb 2022
-        //consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 2419200; // 364 days later
+        //consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nStartHeight = 2209536; // Jan/Feb 2024
+        //consensus.vDeployments[Consensus::DEPLOYMENT_MWEB].nTimeoutHeight = 2419200; //  days later
 
         //consensus.nMinimumChainWork = uint256S("0x000000000000000000000000000000000000000000000000004260a1758f04aa");
         //consensus.defaultAssumeValid = uint256S("0x4a280c0e150e3b74ebe19618e6394548c8a39d5549fd9941b9c431c73822fbd5"); // 1737876
