@@ -121,15 +121,11 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b"));
         assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a7a9beeb9dd1a7aa671c8522f79053cc56a71e336ba6cc3352f047"));
 
-        // Note that of those which support the service bits prefix, most only support a subset of
-        // possible options.
-        // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
-        // service bits we want, but we should get them updated to support all service bits wanted by any
-        // release ASAP to avoid it where possible.
+        
         vSeeds.emplace_back("95.111.231.8");
-        ///vSeeds.emplace_back("95.111.231.8");
-        ///vSeeds.emplace_back("dnsseed.aiblockchaintools.com");
-        ///vSeeds.emplace_back("dnsseed.aiblockchainpool.org");
+        vSeeds.emplace_back("154.12.237.70");
+        vSeeds.emplace_back("144.126.151.159");
+        vSeeds.emplace_back("154.53.48.56");
         ///vSeeds.emplace_back("dnsseed.aibc-project.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
@@ -152,10 +148,10 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         checkpointData = {
             {
                 {  0, uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b")},
-               /// {  137, uint256S("0xe70eb8d4567ae41204f23f5a7f175990e428caf9cf54cd94a6730c1a351f79de")},
-                ///{  201, uint256S("0xd9bc67eb5a926dd2f32988418bc6eca695f5da1225edc2db46bc40e987389cae")},
-                ///{ 16128, uint256S("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d")},
-                ///{ 23420, uint256S("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507")},
+                {  137, uint256S("0x5f496cb88411e6c186ae2ae057c6c284e5bd5f0dfbc70f4237009427f45b069a")},
+                {  201, uint256S("0x1b3f646376289e20eaeaf949cf823dab6508508c5566dbc160a4ec1d30572e6e")},
+                { 1111, uint256S("0xe48adb08da0583d48b5d18e01f7f298258e33ceb83e544271c687daca9e22333")},
+                { 23420, uint256S("0x884a31307f404b907c83dd2312144f727c35e1e7f6b611a1b9a28837077b46fa")},
                 ///{ 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
                 ///{ 80000, uint256S("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a")},
                 ///{120000, uint256S("0xbd9d26924f05f6daa7f0155f32828ec89e8e29cee9e7121b026a7a3552ac6131")},
