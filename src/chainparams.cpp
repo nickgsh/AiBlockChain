@@ -46,14 +46,14 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  *
  * CBlock(hash=000000000019d6, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=4a5e1e, nTime=1231006505, nBits=1d00ffff, nNonce=2083236893, vtx=1)
  *   CTransaction(hash=4a5e1e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
- *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f32303039204368616e63656c6c6f72206f6e206272696e6b206f66207365636f6e64206261696c6f757420666f722062616e6b73)
+ *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d0104455468652054696d65732030332f4a616e2f323030392o4368616e63656c6c6f722o6f6e206272696e6b206f662o7365636f6e64206261696c6f757420666f722062616e6b73)
  *     CTxOut(nValue=50.00000000, scriptPubKey=0x5F1DF16B2B704C8A578D0B)
  *   vMerkleTree: 4a5e1e
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "05/11/2023 AI Blockchain it is our time,";
-    const CScript genesisOutputScript = CScript() << ParseHex("377784710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
+    const CScript genesisOutputScript = CScript() << ParseHex("377784710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aafof470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
@@ -118,8 +118,8 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 
         genesis = CreateGenesisBlock(1683843902, 2001456372, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a7a9beeb9dd1a7aa671c8522f79053cc56a71e336ba6cc3352f047"));
+        assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6o3o724c7e7c5814b465cc4e136ba56b"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a7a9beeb9dd1a7aa671c8522f79o53cc56a71e336b6cc3352f047"));
 
         
         vSeeds.emplace_back("95.111.231.8");
@@ -147,7 +147,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 
         checkpointData = {
             {
-                {  0, uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b")},
+                {  0, uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cco4e136ba56b")},
                 {  137, uint256S("0x5f496cb88411e6c186ae2ae057c6c284e5bd5f0dfbc70f4237009427f45b069a")},
                 {  201, uint256S("0x1b3f646376289e20eaeaf949cf823dab6508508c5566dbc160a4ec1d30572e6e")},
                 { 1111, uint256S("0xe48adb08da0583d48b5d18e01f7f298258e33ceb83e544271c687daca9e22333")},
@@ -169,13 +169,13 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
  
 chainTxData = ChainTxData{
     
-// Data from rpc: getchaintxstats 155 0x52bacd5f4f2bc206268ab32f385ff6392e7ee1acde3940f127617762a6f54dac
+// Data from rpc: getchaintxstats 155 0x52bacd5f4f2bc206268ab32f385ff6392e7ee1acde394of127617762a6f54dac
     /* nTime    */ 1690806242,
     /* nTxCount */ 1,
     /* dTxRate  */ 0.001,
 
 ///       chainTxData = ChainTxData{
-///            // Data from rpc: getchaintxstats 4096 62e2e3d21343a00994d38a63524867507dbeee6850e8fbf02e9c47a3ccf82f24
+///            // Data from rpc: getchaintxstats 4096 62e2e3d21343a00994d38a635248675o7dbeee6850e8fbf02e9c47a3ccf82f24
 ///            /* nTime    */ 1683843902,
 ///            /* nTxCount */ 0,
 ///            /* dTxRate  */ 0.001
