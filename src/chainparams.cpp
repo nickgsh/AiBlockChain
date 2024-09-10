@@ -1,8 +1,3 @@
-// Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2009-2020 The Bitcoin Core developers
-// Distributed under the MIT software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include <chainparams.h>
 
 #include <chainparamsseeds.h>
@@ -56,7 +51,6 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
     const CScript genesisOutputScript = CScript() << ParseHex("377784710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
-
 /**
  * Main network
  */
@@ -76,7 +70,7 @@ public:
         consensus.CSVHeight = 77; // 53e0af7626f7f51ce9f3b6cfc36508a5b1d2f6c4a75ac215dc079442692a4c0b
         consensus.SegwitHeight = 77; // 0000000000000000001c8018d9cb3b742ef25114f27563e3fc4a1902167f9893
         consensus.MinBIP9WarningHeight = 83; // segwit activation height + miner confirmation window
-        
+
 consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 60; // 60 seconds (1 minutes)
         consensus.nPowTargetSpacing = 0.5 * 60; // 60 seconds (1 minute)
@@ -84,7 +78,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 1; // 75% of 8064
  consensus.nMinerConfirmationWindow = 11; // nPowTargetTimespan / nPowTargetSpacing * 4
-       
+
          consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = Consensus::BIP9Deployment::NEVER_ACTIVE;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;
@@ -121,7 +115,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b"));
         assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a7a9beeb9dd1a7aa671c8522f79053cc56a71e336ba6cc3352f047"));
 
-        
+
         vSeeds.emplace_back("95.111.231.8");
         vSeeds.emplace_back("154.12.237.70");
         vSeeds.emplace_back("144.126.151.159");
@@ -153,22 +147,14 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
                 { 1111, uint256S("0xe48adb08da0583d48b5d18e01f7f298258e33ceb83e544271c687daca9e22333")},
                 { 23420, uint256S("0x884a31307f404b907c83dd2312144f727c35e1e7f6b611a1b9a28837077b46fa")},
                 ///{ 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
-                ///{ 80000, uint256S("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a")},
-                ///{120000, uint256S("0xbd9d26924f05f6daa7f0155f32828ec89e8e29cee9e7121b026a7a3552ac6131")},
-                ///{161500, uint256S("0xdbe89880474f4bb4f75c227c77ba1cdc024991123b28b8418dbbf7798471ff43")},
-                ///{179620, uint256S("0x2ad9c65c990ac00426d18e446e0fd7be2ffa69e9a7dcb28358a50b2b78b9f709")},
-                ///{240000, uint256S("0x7140d1c4b4c2157ca217ee7636f24c9c73db39c4590c4e6eab2e3ea1555088aa")},
-                ///{383640, uint256S("0x2b6809f094a9215bafc65eb3f110a35127a34be94b7d0590a096c3f126c6f364")},
-                ///{409004, uint256S("0x487518d663d9f1fa08611d9395ad74d982b667fbdc0e77e9cf39b4f1355908a3")},
-                ///{456000, uint256S("0xbf34f71cc6366cd487930d06be22f897e34ca6a40501ac7d401be32456372004")},
-                ///{638902, uint256S("0x15238656e8ec63d28de29a8c75fcf3a5819afc953dcd9cc45cecc53baec74f38")},
+              
                 ///{721000, uint256S("0x198a7b4de1df9478e2463bd99d75b714eab235a2e63e741641dc8a759a9840e5")},
             }
         };
 
- 
+
 chainTxData = ChainTxData{
-    
+
 // Data from rpc: getchaintxstats 155 0x52bacd5f4f2bc206268ab32f385ff6392e7ee1acde3940f127617762a6f54dac
     /* nTime    */ 1690806242,
     /* nTxCount */ 1,
@@ -183,6 +169,8 @@ chainTxData = ChainTxData{
     }
 };
 
+
+
 /**
  * Testnet (v3)
  */
@@ -193,14 +181,6 @@ public:
         consensus.signet_blocks = false;
         consensus.signet_challenge.clear();
         consensus.nSubsidyHalvingInterval = 1051200;
-        //consensus.BIP16Height = 0; // always enforce P2SH BIP16 on testnet
-        //consensus.BIP34Height = 76;
-        //consensus.BIP34Hash = uint256S("8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573");
-        //consensus.BIP65Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
-        //consensus.BIP66Height = 76; // 8075c771ed8b495ffd943980a95f702ab34fce3c8c54e379548bda33cc8c0573
-        //consensus.CSVHeight = 6048; // 00000000025e930139bac5c6c31a403776da130831ab85be56578f3fa75369bb
-        //consensus.SegwitHeight = 6048; // 00000000002b980fcd729daaa248fd9316a5200e9b367f4ff2c42453e84201ca
-        //consensus.MinBIP9WarningHeight = 8064; // segwit activation height + miner confirmation window
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 1260; // 1260 seconds (21 minutes)
         consensus.nPowTargetSpacing = 1 * 60; // 60 seconds (1 minute)
