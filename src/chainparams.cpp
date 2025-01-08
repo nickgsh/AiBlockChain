@@ -147,7 +147,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
                 {  201, uint256S("0x1b3f646376289e20eaeaf949cf823dab6508508c5566dbc160a4ec1d30572e6e")},
                 { 1111, uint256S("0xe48adb08da0583d48b5d18e01f7f298258e33ceb83e544271c687daca9e22333")},
                 { 23420, uint256S("0x884a31307f404b907c83dd2312144f727c35e1e7f6b611a1b9a28837077b46fa")},
-                ///{ 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
+                { 50000, uint256S("0x71e700b53dd58ce0fcabc52935c0b168e58a3a779aa5a85f120b1e0d1227ce16")},
 
                 ///{721000, uint256S("0x198a7b4de1df9478e2463bd99d75b714eab235a2e63e741641dc8a759a9840e5")},
             }
