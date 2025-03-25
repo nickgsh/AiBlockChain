@@ -103,9 +103,9 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
          * a large 32-bit integer with any alignment.
          */
         pchMessageStart[0] = 0xab;
-        pchMessageStart[1] = 0xc0;
+        pchMessageStart[1] = 0x0c;
         pchMessageStart[2] = 0xba;
-        pchMessageStart[3] = 0xab;
+        pchMessageStart[3] = 0xba;
         nDefaultPort = 7773;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 40;
@@ -113,8 +113,8 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 
         genesis = CreateGenesisBlock(1683843902, 2001456372, 0x1e0ffff0, 1, 100 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a7a9beeb9dd1a7aa671c8522f79053cc56a71e336ba6cc3352f047"));
+        assert(consensus.hashGenesisBlock == uint256S("0x8ffb7807e73b9a2c800ddb765efd53c6030724c7e7c5814b465cca4e176ba56b"));
+        assert(genesis.hashMerkleRoot == uint256S("0xc0d14990a9a3a9beeb9dd1a3aa671c8522f39053cc56a71e336ba6cc3352f047"));
 
 
         vSeeds.emplace_back("95.111.231.8");
@@ -123,9 +123,9 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
         vSeeds.emplace_back("154.53.48.56");
         ///vSeeds.emplace_back("dnsseed.aibc-project.com");
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,23);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,23);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,32);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,32);
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,33);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,176);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
@@ -142,8 +142,8 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 
         checkpointData = {
             {
-                {  0, uint256S("0x8ffb7807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b")},
-                {  137, uint256S("0x5f496cb88411e6c186ae2ae057c6c284e5bd5f0dfbc70f4237009427f45b069a")},
+                {  0, uint256S("0x8ffb3807e33b9a2c800ddb365efd53c6030724c7e7c5814b465cca4e136ba56b")},
+                {  137, uint256S("0x5f496cb88411e6c186ae2ae057c6c284e5bd5f0dfbc30f4237009427f45b069a")},
                 {  201, uint256S("0x1b3f646376289e20eaeaf949cf823dab6508508c5566dbc160a4ec1d30572e6e")},
                 { 1111, uint256S("0xe48adb08da0583d48b5d18e01f7f298258e33ceb83e544271c687daca9e22333")},
                 { 23420, uint256S("0x884a31307f404b907c83dd2312144f727c35e1e7f6b611a1b9a28837077b46fa")},
@@ -157,7 +157,7 @@ consensus.powLimit = uint256S("00000ffffffffffffffffffffffffffffffffffffffffffff
 chainTxData = ChainTxData{
 
 // Data from rpc: getchaintxstats 155 0x52bacd5f4f2bc206268ab32f385ff6392e7ee1acde3940f127617762a6f54dac
-    /* nTime    */ 1690806242,
+    /* nTime    */ 1690086242,
     /* nTxCount */ 1,
     /* dTxRate  */ 0.001,
 
